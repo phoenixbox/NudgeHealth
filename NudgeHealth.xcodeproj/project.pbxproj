@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		344AC7471BD0221B008CEC35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344AC7461BD0221B008CEC35 /* AppDelegate.swift */; };
+		344AC7491BD0221B008CEC35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344AC7481BD0221B008CEC35 /* ViewController.swift */; };
+		344AC74C1BD0221B008CEC35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 344AC74A1BD0221B008CEC35 /* Main.storyboard */; };
+		344AC74E1BD0221B008CEC35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 344AC74D1BD0221B008CEC35 /* Assets.xcassets */; };
+		344AC7511BD0221B008CEC35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 344AC74F1BD0221B008CEC35 /* LaunchScreen.storyboard */; };
+		344AC75C1BD0221B008CEC35 /* NudgeHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344AC75B1BD0221B008CEC35 /* NudgeHealthTests.swift */; };
+		344AC7671BD0221B008CEC35 /* NudgeHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344AC7661BD0221B008CEC35 /* NudgeHealthUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		344AC7581BD0221B008CEC35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 344AC73B1BD0221B008CEC35 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 344AC7421BD0221B008CEC35;
+			remoteInfo = NudgeHealth;
+		};
+		344AC7631BD0221B008CEC35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 344AC73B1BD0221B008CEC35 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 344AC7421BD0221B008CEC35;
+			remoteInfo = NudgeHealth;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		344AC7431BD0221B008CEC35 /* NudgeHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NudgeHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		344AC7461BD0221B008CEC35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		344AC7481BD0221B008CEC35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		344AC74B1BD0221B008CEC35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		344AC74D1BD0221B008CEC35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		344AC7501BD0221B008CEC35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		344AC7521BD0221B008CEC35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		344AC7571BD0221B008CEC35 /* NudgeHealthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NudgeHealthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		344AC75B1BD0221B008CEC35 /* NudgeHealthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NudgeHealthTests.swift; sourceTree = "<group>"; };
+		344AC75D1BD0221B008CEC35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		344AC7621BD0221B008CEC35 /* NudgeHealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NudgeHealthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		344AC7661BD0221B008CEC35 /* NudgeHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NudgeHealthUITests.swift; sourceTree = "<group>"; };
+		344AC7681BD0221B008CEC35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		344AC7401BD0221B008CEC35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		344AC7541BD0221B008CEC35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		344AC75F1BD0221B008CEC35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		344AC73A1BD0221B008CEC35 = {
+			isa = PBXGroup;
+			children = (
+				344AC7451BD0221B008CEC35 /* NudgeHealth */,
+				344AC75A1BD0221B008CEC35 /* NudgeHealthTests */,
+				344AC7651BD0221B008CEC35 /* NudgeHealthUITests */,
+				344AC7441BD0221B008CEC35 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		344AC7441BD0221B008CEC35 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				344AC7431BD0221B008CEC35 /* NudgeHealth.app */,
+				344AC7571BD0221B008CEC35 /* NudgeHealthTests.xctest */,
+				344AC7621BD0221B008CEC35 /* NudgeHealthUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		344AC7451BD0221B008CEC35 /* NudgeHealth */ = {
+			isa = PBXGroup;
+			children = (
+				344AC7461BD0221B008CEC35 /* AppDelegate.swift */,
+				344AC7481BD0221B008CEC35 /* ViewController.swift */,
+				344AC74A1BD0221B008CEC35 /* Main.storyboard */,
+				344AC74D1BD0221B008CEC35 /* Assets.xcassets */,
+				344AC74F1BD0221B008CEC35 /* LaunchScreen.storyboard */,
+				344AC7521BD0221B008CEC35 /* Info.plist */,
+			);
+			path = NudgeHealth;
+			sourceTree = "<group>";
+		};
+		344AC75A1BD0221B008CEC35 /* NudgeHealthTests */ = {
+			isa = PBXGroup;
+			children = (
+				344AC75B1BD0221B008CEC35 /* NudgeHealthTests.swift */,
+				344AC75D1BD0221B008CEC35 /* Info.plist */,
+			);
+			path = NudgeHealthTests;
+			sourceTree = "<group>";
+		};
+		344AC7651BD0221B008CEC35 /* NudgeHealthUITests */ = {
+			isa = PBXGroup;
+			children = (
+				344AC7661BD0221B008CEC35 /* NudgeHealthUITests.swift */,
+				344AC7681BD0221B008CEC35 /* Info.plist */,
+			);
+			path = NudgeHealthUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		344AC7421BD0221B008CEC35 /* NudgeHealth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 344AC76B1BD0221B008CEC35 /* Build configuration list for PBXNativeTarget "NudgeHealth" */;
+			buildPhases = (
+				344AC73F1BD0221B008CEC35 /* Sources */,
+				344AC7401BD0221B008CEC35 /* Frameworks */,
+				344AC7411BD0221B008CEC35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NudgeHealth;
+			productName = NudgeHealth;
+			productReference = 344AC7431BD0221B008CEC35 /* NudgeHealth.app */;
+			productType = "com.apple.product-type.application";
+		};
+		344AC7561BD0221B008CEC35 /* NudgeHealthTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 344AC76E1BD0221B008CEC35 /* Build configuration list for PBXNativeTarget "NudgeHealthTests" */;
+			buildPhases = (
+				344AC7531BD0221B008CEC35 /* Sources */,
+				344AC7541BD0221B008CEC35 /* Frameworks */,
+				344AC7551BD0221B008CEC35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				344AC7591BD0221B008CEC35 /* PBXTargetDependency */,
+			);
+			name = NudgeHealthTests;
+			productName = NudgeHealthTests;
+			productReference = 344AC7571BD0221B008CEC35 /* NudgeHealthTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		344AC7611BD0221B008CEC35 /* NudgeHealthUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 344AC7711BD0221B008CEC35 /* Build configuration list for PBXNativeTarget "NudgeHealthUITests" */;
+			buildPhases = (
+				344AC75E1BD0221B008CEC35 /* Sources */,
+				344AC75F1BD0221B008CEC35 /* Frameworks */,
+				344AC7601BD0221B008CEC35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				344AC7641BD0221B008CEC35 /* PBXTargetDependency */,
+			);
+			name = NudgeHealthUITests;
+			productName = NudgeHealthUITests;
+			productReference = 344AC7621BD0221B008CEC35 /* NudgeHealthUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		344AC73B1BD0221B008CEC35 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Shane Rogers";
+				TargetAttributes = {
+					344AC7421BD0221B008CEC35 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					344AC7561BD0221B008CEC35 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 344AC7421BD0221B008CEC35;
+					};
+					344AC7611BD0221B008CEC35 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 344AC7421BD0221B008CEC35;
+					};
+				};
+			};
+			buildConfigurationList = 344AC73E1BD0221B008CEC35 /* Build configuration list for PBXProject "NudgeHealth" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 344AC73A1BD0221B008CEC35;
+			productRefGroup = 344AC7441BD0221B008CEC35 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				344AC7421BD0221B008CEC35 /* NudgeHealth */,
+				344AC7561BD0221B008CEC35 /* NudgeHealthTests */,
+				344AC7611BD0221B008CEC35 /* NudgeHealthUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		344AC7411BD0221B008CEC35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				344AC7511BD0221B008CEC35 /* LaunchScreen.storyboard in Resources */,
+				344AC74E1BD0221B008CEC35 /* Assets.xcassets in Resources */,
+				344AC74C1BD0221B008CEC35 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		344AC7551BD0221B008CEC35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		344AC7601BD0221B008CEC35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		344AC73F1BD0221B008CEC35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				344AC7491BD0221B008CEC35 /* ViewController.swift in Sources */,
+				344AC7471BD0221B008CEC35 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		344AC7531BD0221B008CEC35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				344AC75C1BD0221B008CEC35 /* NudgeHealthTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		344AC75E1BD0221B008CEC35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				344AC7671BD0221B008CEC35 /* NudgeHealthUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		344AC7591BD0221B008CEC35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 344AC7421BD0221B008CEC35 /* NudgeHealth */;
+			targetProxy = 344AC7581BD0221B008CEC35 /* PBXContainerItemProxy */;
+		};
+		344AC7641BD0221B008CEC35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 344AC7421BD0221B008CEC35 /* NudgeHealth */;
+			targetProxy = 344AC7631BD0221B008CEC35 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		344AC74A1BD0221B008CEC35 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				344AC74B1BD0221B008CEC35 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		344AC74F1BD0221B008CEC35 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				344AC7501BD0221B008CEC35 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		344AC7691BD0221B008CEC35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		344AC76A1BD0221B008CEC35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		344AC76C1BD0221B008CEC35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NudgeHealth/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = REPL.NudgeHealth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		344AC76D1BD0221B008CEC35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NudgeHealth/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = REPL.NudgeHealth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		344AC76F1BD0221B008CEC35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = NudgeHealthTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = REPL.NudgeHealthTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NudgeHealth.app/NudgeHealth";
+			};
+			name = Debug;
+		};
+		344AC7701BD0221B008CEC35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = NudgeHealthTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = REPL.NudgeHealthTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NudgeHealth.app/NudgeHealth";
+			};
+			name = Release;
+		};
+		344AC7721BD0221B008CEC35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NudgeHealthUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = REPL.NudgeHealthUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = NudgeHealth;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		344AC7731BD0221B008CEC35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NudgeHealthUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = REPL.NudgeHealthUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = NudgeHealth;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		344AC73E1BD0221B008CEC35 /* Build configuration list for PBXProject "NudgeHealth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				344AC7691BD0221B008CEC35 /* Debug */,
+				344AC76A1BD0221B008CEC35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		344AC76B1BD0221B008CEC35 /* Build configuration list for PBXNativeTarget "NudgeHealth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				344AC76C1BD0221B008CEC35 /* Debug */,
+				344AC76D1BD0221B008CEC35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		344AC76E1BD0221B008CEC35 /* Build configuration list for PBXNativeTarget "NudgeHealthTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				344AC76F1BD0221B008CEC35 /* Debug */,
+				344AC7701BD0221B008CEC35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		344AC7711BD0221B008CEC35 /* Build configuration list for PBXNativeTarget "NudgeHealthUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				344AC7721BD0221B008CEC35 /* Debug */,
+				344AC7731BD0221B008CEC35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 344AC73B1BD0221B008CEC35 /* Project object */;
+}
