@@ -9,22 +9,20 @@
 import UIKit
 import HealthKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
-    let heightQuantity = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeight)
-    let weightQuantity = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)
-    let heartRateQuantity = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeartRate)
+    let heightQuantityType = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeight)!
+    let heartRateQuantityType = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeartRate)!
+    let weightQuantityType = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)!
+    let textFieldRightLabel = UILabel(frame: CGRectZero)
+    
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var saveButton: UIButton!
     
     lazy var healthStore = HKHealthStore()
     
-    // Not to be written to the health store - share === written
-    lazy var typesToShare: NSSet = {
-        return NSSet(objects: self.heightQuantity!, self.weightQuantity!)
-    }()
-    
-    // Data to read
-    lazy var typesToRead: NSSet = {
-        return NSSet(objects: self.heightQuantity!, self.weightQuantity!, self.heartRateQuantity!)
+    lazy var types: NSSet = {
+        return NSSet(object: self.weightQuantityType)
     }()
     
     
@@ -32,11 +30,12 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         
         if HKHealthStore.isHealthDataAvailable() {
-            healthStore.requestAuthorizationToShareTypes(typesToShare as? Set<HKSampleType>,
-                readTypes: typesToRead as? Set<HKObjectType>,
-                completion: {(succeeded: Bool, error: NSError?) -> Void in
+            healthStore.requestAuthorizationToShareTypes((types as! Set<HKSampleType>),
+                readTypes: (types as! Set<HKObjectType>),
+                completion: {[weak self](succeeded: Bool, error: NSError?) -> Void in
+                    let strongSelf = self!
                     if succeeded && error == nil {
-                        print("Auth successful")
+                        dispatch_async(dispatch_get_main_queue(),strongSelf.readWeightInformation)
                     } else {
                         if let theError = error {
                             print("Error occurred = \(theError)")
@@ -49,9 +48,50 @@ class ViewController: UIViewController {
         }
     }
     
+    func readWeightInformation() {
+        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate,
+            ascending: false)
+
+        let query = HKSampleQuery(sampleType: weightQuantityType,
+            predicate: nil,
+            limit: 1,
+            sortDescriptors: [sortDescriptor],
+            resultsHandler: {
+                (query:HKSampleQuery, results:[HKSample]?, error:NSError?) -> Void in
+                
+                if results!.count > 0 {
+                    let sample = results![0] as! HKQuantitySample
+                    let weightInKilograms = sample.quantity.doubleValueForUnit(HKUnit.gramUnitWithMetricPrefix(.Kilo))
+                    
+                    let formatter = NSMassFormatter()
+                    let kilogramSuffix = formatter.unitStringFromValue(weightInKilograms, unit: .Kilogram)
+                    
+                    dispatch_async(dispatch_get_main_queue(),{
+                        let strongSelf = self
+                        
+                        strongSelf.textFieldRightLabel.text = kilogramSuffix
+                        strongSelf.textFieldRightLabel.sizeToFit()
+                        
+                        let weightFormattedAsString = NSNumberFormatter.localizedStringFromNumber(NSNumber(double: weightInKilograms), numberStyle: .NoStyle)
+                        
+                        strongSelf.textField.text = weightFormattedAsString
+                    })
+                    
+                } else {
+                    print("Couldnt read the users weight")
+                    print("Or there was no weight to read")
+                }
+            }
+        )
+        healthStore.executeQuery(query)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        textField.rightView = textFieldRightLabel
+        textField.rightViewMode = .Always
     }
 
     override func didReceiveMemoryWarning() {
