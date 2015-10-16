@@ -18,29 +18,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var saveButton: UIButton!
-    @IBAction func saveWeight(sender: AnyObject) {
-        let kilogramUnit = HKUnit.gramUnitWithMetricPrefix(.Kilo)
-        let weightVal = (textField.text! as NSString).doubleValue
-        
-        let weightQuantity = HKQuantity(unit: kilogramUnit,
-            doubleValue: weightVal)
-        let now = NSDate()
-        let sample = HKQuantitySample(
-            type: weightQuantityType,
-            quantity: weightQuantity,
-            startDate: now,
-            endDate: now
-        )
-        
-        healthStore.saveObject(sample) { (succeeded, error) -> Void in
-            if error == nil {
-                print("Successfully saved the user's weight")
-            } else {
-                print("Failed to save the user's weight")
-            }
-        }
-    }
-    
+  
     lazy var healthStore = HKHealthStore()
     
     lazy var types: NSSet = {
@@ -57,11 +35,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 completion: {[weak self](succeeded: Bool, error: NSError?) -> Void in
                     let strongSelf = self!
                     if succeeded && error == nil {
-                        dispatch_async(dispatch_get_main_queue(),strongSelf.readWeightInformation)
+                      dispatch_async(dispatch_get_main_queue(),
+                        strongSelf.readWeightInformation)
                     } else {
-                        if let theError = error {
-                            print("Error occurred = \(theError)")
-                        }
+                      if let theError = error {
+                        print("Error occurred = \(theError)")
+                      }
                     }
                 }
             )
@@ -84,21 +63,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 if results!.count > 0 {
                     let sample = results![0] as! HKQuantitySample
                     let weightInKilograms = sample.quantity.doubleValueForUnit(HKUnit.gramUnitWithMetricPrefix(.Kilo))
-                    
+                  
                     let formatter = NSMassFormatter()
                     let kilogramSuffix = formatter.unitStringFromValue(weightInKilograms, unit: .Kilogram)
-                    
-                    dispatch_async(dispatch_get_main_queue(),{
-                        let strongSelf = self
-                        
-                        strongSelf.textFieldRightLabel.text = kilogramSuffix
-                        strongSelf.textFieldRightLabel.sizeToFit()
-                        
-                        let weightFormattedAsString = NSNumberFormatter.localizedStringFromNumber(NSNumber(double: weightInKilograms), numberStyle: .NoStyle)
-                        print("users weight is: \(weightFormattedAsString)")
-                        strongSelf.textField.text = weightFormattedAsString
-                    })
-                    
+                  
+                    self.setValueOnTextField(kilogramSuffix, weightInKilograms: weightInKilograms)                    
                 } else {
                     print("Couldnt read the users weight")
                     print("Or there was no weight to read")
@@ -107,7 +76,44 @@ class ViewController: UIViewController, UITextFieldDelegate {
         )
         healthStore.executeQuery(query)
     }
-    
+  
+    func setValueOnTextField(kilogramSuffix: String, weightInKilograms: Double) {
+      dispatch_async(dispatch_get_main_queue(), { () -> Void in
+        let strongSelf = self
+        
+        strongSelf.textFieldRightLabel.text = kilogramSuffix
+        strongSelf.textFieldRightLabel.sizeToFit()
+        
+        let weightFormattedAsString = NSNumberFormatter.localizedStringFromNumber(NSNumber(double: weightInKilograms), numberStyle: .NoStyle)
+        print("users weight is: \(weightFormattedAsString)")
+        strongSelf.textField.text = weightFormattedAsString
+      })
+    }
+  
+    @IBAction func saveWeight(sender: AnyObject) {
+      let kilogramUnit = HKUnit.gramUnitWithMetricPrefix(.Kilo)
+      let weightVal = (textField.text! as NSString).doubleValue
+      
+      let weightQuantity = HKQuantity(unit: kilogramUnit,
+        doubleValue: weightVal)
+      let now = NSDate()
+      let sample = HKQuantitySample(
+        type: weightQuantityType,
+        quantity: weightQuantity,
+        startDate: now,
+        endDate: now
+      )
+      
+      healthStore.saveObject(sample) { (succeeded, error) -> Void in
+        if error == nil {
+          print("Successfully saved the user's weight")
+        } else {
+          print("Failed to save the user's weight")
+        }
+      }
+    }
+
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
